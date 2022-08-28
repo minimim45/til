@@ -14,3 +14,30 @@ for (初期化式; 条件式; 変化式) {
     // 条件式がtrueのときに繰り返す処理
 }
 ```
+
+## 様々なfor文の使い方
+### 基本
+```java
+import java.util.ArrayList;
+import java.util.List;
+ 
+public class Main {
+    
+    public static void main(String args[]) {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+     
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + " : " + list.get(i));
+        }
+    }
+    
+}
+
+// 結果
+// 0 : a
+// 1 : b
+// 2 : c
+```
