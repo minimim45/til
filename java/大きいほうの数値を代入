@@ -1,0 +1,9 @@
+
+public class Main2_12{
+  public static void main(String[] args) {
+    int c = 5;
+    int g = 3;
+    int k =Math.max(c, g);
+System.out.println("比較実験:" + c + "と" + g + "とで大きいほうは..." + k);
+  }
+}
