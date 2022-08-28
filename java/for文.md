@@ -114,15 +114,13 @@ public class Main {
 - 配列やListなどのコレクションのすべての要素に対して順番に処理を行うために使う
 - 拡張for文は通常のfor文と違って条件式と変化式が無いため、簡潔にコードが記述できる
 ```java
-public class Main {
-    public static void main(String[] args) {
- 
-        String[] strArray = { "s", "a", "m", "u", "r", "a", "i" };
- 
-        for (String str : strArray) {
-            System.out.print(str);
-        }
+public class Test {
+  public static void main(String[] args) {
+     String[] str = { "s", "a", "m", "u", "r", "a", "i" };
+    for (String abc : str) {
+      System.out.print(abc);
     }
+  }
 }
 
 // 結果
