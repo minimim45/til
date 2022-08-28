@@ -1,0 +1,9 @@
+```java
+public class Main {
+  public static void main(String[] args) {
+      folat f = 50;  //int型をfolat型に代入
+     double i  =　f;　// double型にfolat型に代入
+     System.out.println(f);
+     System.out.println(i);
+  }
+}
