@@ -99,6 +99,7 @@ public class Main {
 ```
 
 ### 2重ループ
+- 2重ループは二次元配列のすべての要素を表示したい場合などに使われ
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -117,4 +118,42 @@ public class Main {
 // 結果
 // s a m u r a i 
 // S A M U R A I
+```
+
+### 拡張for文
+- 配列やListなどのコレクションのすべての要素に対して順番に処理を行うために使う
+- 拡張for文は通常のfor文と違って条件式と変化式が無いため、簡潔にコードが記述できる
+```java
+public class Main {
+    public static void main(String[] args) {
+ 
+        String[] strArray = { "s", "a", "m", "u", "r", "a", "i" };
+ 
+        for (String str : strArray) {
+            System.out.print(str);
+        }
+    }
+}
+
+// 結果
+// samurai
+```
+
+### forEachメソッド
+- Java8でforEachメソッドとラムダ式が追加されました。これにより、さらに簡潔にコードが書けるようになりました
+- [詳しくはコチラ](https://www.sejuku.net/blog/22232)
+```java
+import java.util.Arrays;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        String[] strArray = { "s", "a", "m", "u", "r", "a", "i" };
+ 
+        Arrays.stream(strArray).forEach(str -> System.out.print(str));
+    }
+}
+
+// 結果
+// samurai
 ```
