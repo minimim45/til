@@ -24,24 +24,14 @@ for (初期化式; 条件式; 変化式) {
 ## 様々なfor文の使い方
 ### 基本
 ```java
-import java.util.ArrayList;
-import java.util.List;
- 
-public class Main {
-    
+public class Test {
     public static void main(String args[]) {
-        List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-     
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(i + " : " + list.get(i));
+    String[] str = {"a", "b", "c"};
+        for (int i = 0; i < str.length; i++) {
+            System.out.println(i + ":" + str[i]);
         }
     }
-    
 }
-
 // 結果
 // 0 : a
 // 1 : b
