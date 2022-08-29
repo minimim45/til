@@ -1,3 +1,4 @@
+```java Integre(①の文字列を変換したい型).parseint(①の文字列を変換したい型);
 public class Main{
   public static void main(String[] args) {
     String age = "31";
