@@ -1,0 +1,5 @@
+```css
+content …… 内容（コンテンツ）を挿入する
+quotes …… 引用符を設定する
+counter-increment …… 要素の連番（カウンタ）の値を進める
+counter-reset …… 要素の連番（カウンタ）の値をリセットする
