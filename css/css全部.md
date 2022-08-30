@@ -1,1 +1,1 @@
-https://www.tagindex.com/stylesheet/
+(https://www.tagindex.com/stylesheet/)
