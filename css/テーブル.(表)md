@@ -1,8 +1,7 @@
 ```css
 table-layout …… テーブル（表）の表示方法を指定する
 caption-side …… テーブル（表）のキャプションの位置を指定する
-caption-side:top
-caption-side:
+caption-side:bottom...captionの入っているところが表の下になる
 border-collapse …… セルのボーダーの表示の仕方を指定する
 border-spacing …… セルのボーダーの間隔を指定する
 empty-cells …… 空白セルのボーダーの表示・非表示を指定する
