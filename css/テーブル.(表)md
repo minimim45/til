@@ -5,3 +5,4 @@ caption-side:bottom...captionの入っているところが表の下になる
 border-collapse …… セルのボーダーの表示の仕方を指定する
 border-spacing …… セルのボーダーの間隔を指定する
 empty-cells …… 空白セルのボーダーの表示・非表示を指定する
+
