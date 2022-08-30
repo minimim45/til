@@ -6,3 +6,13 @@ border-collapse …… セルのボーダーの表示の仕方を指定する
 border-spacing …… セルのボーダーの間隔を指定する
 empty-cells …… 空白セルのボーダーの表示・非表示を指定する
 
+<table>	B	表	
+<caption>	-	表のタイトル	
+<thead>	-	表のヘッダ
+<tfoot>	-	表のフッタ	
+<tbody>	-	表の本体	
+<colgroup>	-	列のグループ化	
+<col>	-	列の設定	
+<tr>	-	表の行
+<td>	-	データ用のセル
+<th>	-	見出し用のセル
