@@ -19,7 +19,6 @@
     font-weight: normal;
     line-height: 1.5;
  }
-    
 </style>
 </head>
 
