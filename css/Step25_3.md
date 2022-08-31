@@ -1,4 +1,3 @@
-```CSS
 <!DOCTYPE html>
 
 <html lang="ja">
