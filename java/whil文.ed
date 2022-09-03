@@ -1,10 +1,10 @@
-
+```java
 public class StatWhile {
   public static void main(String[] args) {
-    int num = 1;  //whil文の中には書けない
+    int num = 1;  //whil文の中には書けない//ここは一回しか回らない
     while (num < 5){
  　   System.out.println("num = " + num); //ここで１を出力
- 　 　num *= 2; //1×2をする
+ 　 　num *= 2; //1×2をする毎回出てきた数に２をかける
     } //次は２×２になる５より大きくなったらおしまい
   }
 }
