@@ -1,0 +1,39 @@
+public class Hero {//たい焼きの金型ヒーローをいくつでも作れる
+  String name;
+  int hp;
+  Sword sword;//あるクラスの中にフィードが存在する状態
+
+  public void attasck(){
+    System.out.println(this.name + "は攻撃した！");
+    System.out.println("敵に5ポイントのダメージを与えた！");//実際はHP減ってない攻撃したと書いてあるだけ
+  }                                                         //引数に攻撃対象を入れることによって（きのこ）とかダメージを与えることができる。
+  public void sleep(){
+    this.hp =100;
+    System.out.println(this.name + "は、眠って回復した！");
+}
+public void sit(int sec){
+  this.hp += sec;
+  System.out.println(this.name + "は、" + sec + "秒座った！");
+  System.out.println("HPが" + sec + "ポイント回復した");
+}
+  public void slip(){
+  System.out.println(this.name + "は、転んだ！");
+  System.out.println("5ダメージ!");
+}
+  public void run(){
+  System.out.println(this.name + "は、逃げだした");
+  System.out.println("GAMEOVER");
+  System.out.println("最終HPは" + this.hp + "でした");
+	}
+
+	public Hero(String name){//コンストラクタに引数を渡すすると100人作っても初期化いらない
+   this.hp = 100;//hpフィールドを１００で初期化
+   this.name = name;//引数を受け取ってフィールドに代入する
+  }
+
+	public Hero() {
+	this.hp = 100;
+	this.name = "ダミー";
+  }
+}
+
