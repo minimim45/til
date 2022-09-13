@@ -1,3 +1,5 @@
+```java
+
 public class Hero {//たい焼きの金型ヒーローをいくつでも作れる
   String name;
   int hp;
