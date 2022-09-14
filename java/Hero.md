@@ -29,11 +29,11 @@ public void sit(int sec){
 	}
 
 	public Hero(String name){//コンストラクタに引数を渡すすると100人作っても初期化いらない
-   this.hp = 100;//hpフィールドを１００で初期化
+   this.hp = 100;//hpフィールドを１００で初期化//あとから名前入れる
    this.name = name;//引数を受け取ってフィールドに代入する
   }
 
-	public Hero() {
+	public Hero() {//決め打ち
 	this.hp = 100;
 	this.name = "ダミー";
   }
