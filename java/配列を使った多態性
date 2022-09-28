@@ -1,0 +1,36 @@
+```java
+public class Main12_6 {//ヒーロにキャラクター
+  public static void main(String[] args) {
+    Hero h1 = new Hero();
+    Hero h2 = new Hero();//名前が無かったら勝手に追加される
+    Thief t1= new Thief("cc");
+    Wizard w1 = new Wizard();
+    Wizard w2 = new Wizard();
+    //冒険開始
+   //まず宿屋にとまる
+    h1.hp += 50;
+    h2.hp += 50;
+    w1.hp += 50;
+    w2.hp += 50;
+  }
+//ここからが配列と多態性の合わせ
+
+public class Main12_7 {//ヒーロにキャラクター
+  public static void main(String[] args) {
+   Character[] c = new Character[5];//箱の最大だけわっかっておけば楽
+    c[0] = new Hero();
+    c[1] = new Hero();//名前が無かったら勝手に追加される
+    c[2] = new Thief("cc");
+    c[3] = new Wizard();
+    c[4] = new Wizard();
+    //冒険開始
+    //まず宿屋にとまる
+    for(Character ch : c) {//拡張for文　同じことをするならこれでOK　同じ処理をしたければ同じことを行うこと。メンバーを変えても使える
+     ch.hp += 50;
+     ch.run ()//みんなにげろ
+    }
+  }
+}
+
+配列の添え字の中にヒーローを入れていく一つのパーティーだと思って行う。
+キャラクターだとすべてをざっくり見て5つのインスタンスをキャラクターにまとめループを回して一括処理することも可能になります
