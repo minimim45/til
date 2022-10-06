@@ -1,0 +1,32 @@
+## StringBuilder を使った文字列の連結
+- +演算子を使うより早く処理できる
+- StringBuilderクラス（ストリング　ビルダー）
+- ①appendメゾットを呼んでバッファ（メモリ）に文字列を追加していく（必要に応じた回数呼び出す）
+- ②歳以後にい1回だけtoString()を呼び完成した連ケル済みの文字列を取り出す。
+```java
+public class Main15_4 {
+  public static void main(String[] aregs) {//＋演算子のメゾット
+    String st ="";
+    long start1 = System.currentTimeMillis();
+    for(int i = 0; i < 100000; i++) {
+      st = st + "Java";
+    }
+    long end1 = System.currentTimeMillis();
+    System.out.println("+演算子の処理時間：" + (end1-start1) + "ミリ秒です");
+
+    StringBuilder sb = new StringBuilder();//ストリングビルダーのメゾット
+    long start2 = System.currentTimeMillis();
+    for(int i = 0; i < 100000; i++) {
+      sb.append("Java");
+    }
+    sb.toString();
+    long end2 = System.currentTimeMillis();
+    System.out.println("StringBuilder演算子の処理時間：" + (end2-start2) + "ミリ秒です");
+  }
+}//+演算子の処理時間：2390ミリ秒です
+//StringBuilder演算子の処理時間：15ミリ秒です
+
+なぜStringBuilderが早いのか＋演算子が不変だが書換も出来ていた毎回newしてインスタンス化していたので時間かかっていた
+しかし、ストリングビルダーは可変のためnewを一回だけでよく時間がかからな
+** まあ+演算子でも結局平気
+
