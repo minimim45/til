@@ -1,0 +1,97 @@
+SELECT  tbl_employee.name,tbl_department.name
+  FROM  tbl_employee, tbl_department;
+  テーブルが同じ場所にあるとダメ繋げかたはダメ一つ tbl_employeeテーブルとtbl_departmenテーブルを一つ一つ結んでいく
+  -　片方の全データを片方を結び付けたもの
+  - 余分なデータを消す
+  社員名と
+  select tbl_employee.name,tbl_department.name
+FROM tbl_employee,tbl_tbldepartment
+where tbl_code = tbl_tbldepartment.code
+
+これだと長いよね短くする。
+SELECT tbl_employee.name,tbl_department.name
+FROM tbl_employee AS X ,tbl_department
+where tbl_code = tbl_department.code
+
+FROM tbl_employeeは別名のｘに置き換えたtbl_departmentをｙに置き換えた
+SELECT tbl_employee.name,tbl_department.name
+FROM tbl_employee AS X ,tbl_department AS y
+where tbl_code = tbl_department.code
+
+**内部結合**
+
+SELECT ｘ.name, y.name
+FROM tbl_employee AS X ,tbl_department AS y
+where tbl_code =  y.code
+
+鈴木一郎	総務部
+山田花子	総務部
+佐藤栄作	営業部
+田中達也	開発部
+高橋和子	開発
+
+## 左外部結合
+
+SELECT x.name AS 社員名 , y.name AS 役職
+FROM tbl_employee AS x LEFT OUTER JOIN tbl_post AS y
+ON post_code = y.code
+
+onで結合させる
+LEFT OUTER JOIN 
+
+自己結合
+自分のテーブルに自分を結合させる
+
+SELECT x.name AS 部下 , y.name AS 上司
+FROM tbl_employee AS x, tbl_employee AS y
+where x.manager = y.code
+
+テーブルから総務部に所属する社員を表示する
+
+SELECT x.name AS 部下 , y.name AS 上司
+FROM tbl_employee AS x,  tbl_department AS y
+where dpt_code = y.code
+ AND y.name ='総務部'
+ 
+ ただし、テーブルは結合しない
+ 
+ SELECT name
+FROM tbl_employee 
+where dpt_code= (SELECT code
+				 FROM tbl_department
+                 where name = '総務部'）
+副問い合せ（サブクエリ）
+
+
+二つの比べるのものがある場合は＝ではなくINを使う
+SELECT name
+FROM tbl_employee 
+where dpt_code　IN (SELECT code
+				 FROM tbl_department
+                 where name = '総務部'
+                 　　　OR name = '開発部')
+                    
+  テーブルから20万以上もらっている人
+
+SELECT name
+FROM tbl_employee 
+where code IN (SELECT emp_code
+				 FROM tbl_salary
+                 where salary >= 200000)
+                
+                同じ
+                 
+存在検査
+
+SELECT name
+FROM tbl_employee 
+where exists (SELECT emp_code
+			  FROM tbl_salary
+			  where tbl_employee .code = emp_code
+			  AND salary >= 200000)
+
+
+
+
+  
+  
