@@ -71,7 +71,7 @@ where dpt_code　IN (SELECT code
                  where name = '総務部'
                  　　　OR name = '開発部')
                     
-  テーブルから20万以上もらっている人
+  **テーブルから20万以上もらっている人**
 
 SELECT name
 FROM tbl_employee 
@@ -80,9 +80,15 @@ where code IN (SELECT emp_code
                  where salary >= 200000)
                 
                 同じ
-                 
+** exists:**
+を見極める方法演算子がほとんど
+演算子をつかうときは
+code = 101
+dpt_BETWEEN '1972'
+exists　（～）
+フィールド名がつくcodeやテーブル名が必ず付く。フィールド名やテーブル名が入ってない場合は完全にexists
 存在検査
-
+上から1つずつ調べて、コードとエンプコードをてらしあわせて、サラリーテーブルから20万円を超える人を見つける。
 SELECT name
 FROM tbl_employee 
 where exists (SELECT emp_code
@@ -90,8 +96,20 @@ where exists (SELECT emp_code
 			  where tbl_employee .code = emp_code
 			  AND salary >= 200000)
 
-
-
-
-  
-  
+存在しないものを調べる
+existnの前にnotを付けることによって、存在しないものをしらべることが可能になる
+where not exists~
+各部署に所属する社員のかずを表示する（集計）
+- グループ化一つ一つのグループ化をしていく。
+SELECT dpt_code,COUNT(*)
+  FROM tbl_employee
+  GROUP BY dpt_code  
+グループ化をすると→集計ができる（合計、平均、件数、最小値、最大値）
+集計（合計）関数
+COUNT....件数
+SUM...合計
+AVG...平均
+MAX...最大
+MIN...最小
+GROUP BYを使うと集計を行うとSELECT dpt_code,COUNT(*)集計したテーブルか結果を記入するSELECT に記入できるものが制限される
+ASをつけて
